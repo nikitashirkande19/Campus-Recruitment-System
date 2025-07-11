@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Campus Recruitment Prediction</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            margin: 0 1rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(to right, #0056b3, #0077ff);
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* About Us Section */
+        .about-us {
+            padding: 2rem 1rem;
+            background-color: #f4f4f9;
+        }
+
+        .about-us h2 {
+            font-size: 1.8rem;
+            color: #0056b3;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-us p, .about-us ul {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-us ul {
+            list-style-type: square;
+            padding-left: 1.5rem;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-us h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-us p, .about-us ul {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('Home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                <li><a href="{{ url_for('main_page') }}">Prediction</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>About Campus Recruitment Prediction</h1>
+            <p>Welcome to the Campus Recruitment Prediction platform! This project is designed to assist 
+                students, educators, and institutions in predicting placement outcomes based on academic 
+                performance, extracurricular activities, and personal profiles. Our aim is to empower 
+                students with insights that can help them enhance their career readiness and prepare for 
+                a bright future.</p>
+        </section>
+        <section class="about-us">
+            <div class="container">
+                <h2>Our Mission</h2>
+                <p>
+                    Our mission is to bridge the gap between education and employment by providing 
+                    data-driven tools that enable students to identify their strengths and work on areas 
+                    for improvement. We strive to create an inclusive, transparent, and efficient recruitment 
+                    process for all stakeholders.
+                </p>
+                <h2>Features</h2>
+                <ul>
+                    <li>Accurate prediction of campus placements using machine learning models.</li>
+                    <li>User-friendly interface to input academic and personal details.</li>
+                    <li>Insights to help students plan their career paths effectively.</li>
+                    <li>Secure data management and analysis.</li>
+                </ul>
+                <h2>Our Team</h2>
+                <p>
+                    This platform was developed by a team of dedicated data enthusiasts and software 
+                    developers passionate about leveraging technology to solve real-world problems. 
+                    Together, we combine expertise in machine learning, web development, and user experience 
+                    design to bring you a seamless and powerful tool.
+                </p>
+                <h2>Get In Touch</h2>
+                <p>
+                    Have questions or feedback? We’d love to hear from you! Visit our 
+                    <a href="{{ url_for('contact') }}">Contact Us</a> page to reach out.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Campus Recruitment Prediction. All Rights Reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navLinks = document.querySelectorAll(".nav-links a");
+
+            navLinks.forEach(link => {
+                link.addEventListener("mouseover", () => {
+                    link.style.textShadow = "0 0 10px #ffcc00";
+                });
+
+                link.addEventListener("mouseout", () => {
+                    link.style.textShadow = "none";
+                });
+            });
+        });
+    </script>
+</body>
+</html>

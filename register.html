@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Product Recommendation System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e81b0;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f4f4f9;
+        }
+
+        .register-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .register-container h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .register-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .register-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1e81b0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-container button:hover {
+            background-color: #155a73;
+        }
+
+        footer {
+            background-color: #1e81b0;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Register</h1>
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Registration Form Section -->
+    <div class="register-container">
+        <h2>Create a New Account</h2>
+        <form action="/register" method="POST">
+            <!-- Full Name Field -->
+            <input type="text" name="full_name" placeholder="Enter your full name" required>
+
+            <!-- Email Field -->
+            <input type="email" name="email" placeholder="Enter your email" required>
+
+            <!-- Username Field -->
+            <input type="text" name="username" placeholder="Choose a username" required>
+
+            <!-- Password Field -->
+            <input type="password" name="password" placeholder="Enter your password" required>
+
+            <!-- Submit Button -->
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login here</a></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Product Recommendation System</p>
+    </footer>
+
+</body>
+</html>
